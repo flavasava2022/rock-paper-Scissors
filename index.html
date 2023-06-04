@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="quaires.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="rules hide">
+      <img class="rules-img" src="images/image-rules.svg" alt="" />
+      <img class="close-btn" src="images/icon-close.svg" alt="" />
+    </div>
+
+    <main>
+      <div class="score-board">
+        <img src="images/logo.svg" alt="" />
+        <div class="score">
+          <p>score</p>
+          <span>12</span>
+        </div>
+      </div>
+      <div class="game">
+        <div class="main">
+          <img class="triangle" src="images/bg-triangle.svg" alt="" />
+          <div class="box-1 box">
+            <img class="img-cho" src="images/icon-paper.svg" alt="" />
+          </div>
+          <div class="box-2 box">
+            <img class="img-cho" src="images/icon-scissors.svg" alt="" />
+          </div>
+          <div class="box-3 box">
+            <img class="img-cho" src="images/icon-rock.svg" alt="" />
+          </div>
+        </div>
+        <div class="choice hide">
+          <div class="choice-box-1 choice-box">
+            <p class="u-text show">you picked</p>
+            <div class="player-1">
+              <img class="choice-1" src="images/icon-paper.svg" alt="" />
+            </div>
+          </div>
+          <div class="play-again">
+            <h3>you won</h3>
+            <button class="paly-again">play again</button>
+          </div>
+          <div class="choice-box-2 choice-box">
+            <p class="h-text show">the house picked</p>
+            <div class="player-2">
+              <img class="choice-2" src="images/icon-scissors.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="rules-btn">rules</button>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

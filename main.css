@@ -1,0 +1,254 @@
+:root {
+  --scissors-gradient: hsl(39, 89%, 49%);
+  --paper-gradient: hsl(230, 89%, 62%);
+  --rock-gradient: hsl(349, 71%, 52%);
+  --cyan: hsl(189, 59%, 53%);
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+}
+body {
+  font-family: "Barlow Semi Condensed";
+  text-transform: uppercase;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  display: grid;
+  height: 100vh;
+  /* width: 98.3vw; */
+  grid-template-rows: 15% 60% 10%;
+  /* grid-template-columns: 1fr; */
+  justify-items: center;
+  align-content: space-evenly;
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.rules {
+  position: absolute;
+  width: 50vh;
+  height: 53vh;
+  margin-left: 38%;
+  top: 23%;
+  background-color: #e8e8e8;
+  z-index: 520000;
+  border-radius: 35px;
+}
+.rules-img {
+  margin-top: 7%;
+  margin-left: 10%;
+}
+.close-btn {
+  position: absolute;
+  bottom: 6%;
+  left: 48%;
+  cursor: pointer;
+}
+
+.score-board {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid var(--header-outline);
+  border-radius: 12px;
+}
+.score-board img {
+  height: 85%;
+}
+.score {
+  height: 95%;
+  width: 21%;
+  padding: 1%;
+  background-color: hsl(0deg 0% 90.55%);
+  border: 2px solid var(--header-outline);
+  border-radius: 12px;
+  text-align: center;
+  color: var(--dark-text);
+}
+.score p {
+  font-size: 1rem;
+}
+.score span {
+  display: block;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+.game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  width: 800px;
+  height: 100%;
+  position: relative;
+  /* margin-left: 25%; */
+}
+.main .triangle {
+  position: absolute;
+  width: 23%;
+  height: 43%;
+  top: 31%;
+  left: 38%;
+}
+.game .box {
+  position: absolute;
+  width: 18vh;
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg 0% 90.55%);
+  border-radius: 50%;
+  border: 15px solid;
+  /* outline-width: 15px;
+  outline-style: double;
+  outline-offset: 20px; */
+  box-shadow: inset 0px 5px hsl(217deg 16% 45% / 39%);
+  cursor: pointer;
+}
+.game .box-1 {
+  top: 17%;
+  left: 31%;
+  border-color: var(--paper-gradient);
+  z-index: 2;
+}
+
+.game .box-2 {
+  top: 17%;
+  right: 31%;
+  border-color: var(--scissors-gradient);
+}
+.game .box-3 {
+  bottom: 19%;
+  right: 43%;
+  border-color: var(--rock-gradient);
+}
+.player-1,
+.player-2 {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+}
+.won {
+  animation-name: outline;
+  animation-duration: 2s;
+
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.hide {
+  display: none !important;
+  transition: 0.3s;
+}
+
+.choice {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.choice-box {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.choice-box img {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg 0% 90.55%);
+  border-radius: 50%;
+  border: 15px solid black;
+  box-shadow: inset 0px 5px hsl(217deg 16% 45% / 39%);
+}
+/* .choice-1 {
+  border-color: var(--scissors-gradient) !important;
+}
+.choice-2 {
+  border-color: var(--rock-gradient) !important;
+} */
+.u-text,
+.h-text {
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 16px;
+  text-align: center;
+  z-index: 5000;
+}
+
+.play-again {
+  padding: 10px;
+  width: fit-content;
+
+  color: white;
+}
+.play-again button {
+  width: 130px;
+  padding: 5px 15px;
+  border-radius: 6px;
+  padding: 5px 30px;
+  margin-top: 5px;
+  color: var(--dark-text);
+}
+.play-again button:hover {
+  transition: 0.3s;
+  color: var(--rock-gradient);
+}
+.play-again h3 {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.rules-btn {
+  margin-left: calc(100% - 150px);
+  display: block;
+  padding: 5px 15px;
+  width: 120px;
+  height: fit-content;
+  background-color: transparent;
+  border: 1px solid var(--header-outline);
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.rules-btn:hover {
+  transition: 0.3s;
+  background-color: white;
+  color: var(--rock-gradient);
+}
+
+@keyframes outline {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.03),
+      0 0 0 84px rgba(255, 255, 255, 0.02),
+      0 0 0 116px rgba(255, 255, 255, 0.01);
+  }
+}

@@ -1,0 +1,44 @@
+@media (max-width: 799px) {
+  .main {
+    width: 100%;
+  }
+  .game {
+    width: 100%;
+  }
+  .main .triangle {
+    width: 23%;
+    height: 43%;
+    top: 31%;
+    left: 38%;
+  }
+  .game .box-1 {
+    top: 17%;
+    left: 31%;
+  }
+  .game .box-2 {
+    top: 17%;
+    right: 31%;
+  }
+  .game .box-3 {
+    bottom: 19%;
+    right: 43%;
+  }
+  .choice {
+    width: 60%;
+  }
+  .choice-box {
+    width: 100%;
+  }
+  .rules {
+    width: 60vw;
+    height: 51vw;
+    margin-left: 20%;
+    top: 23%;
+  }
+  .rules-img {
+    width: 40vw;
+    height: fit-content;
+    margin-top: 11%;
+    margin-left: 17%;
+  }
+}
